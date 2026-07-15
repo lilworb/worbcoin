@@ -7,11 +7,11 @@ baseurl: ""
 remote_theme: pmarsceill/just-the-docs
 search_enabled: true
 heading_anchors: true
+
 nav_list:
     - title: Home
     url: /
     - title: P2P
-    group: P2P
     - title: Trade
     url: /trade
     - title: Markets
@@ -19,7 +19,6 @@ nav_list:
     - title: Wallet
     url: /wallet
     - title: Supermarket
-    group: Supermarket
     - title: Worb Supermarket
     url: /supermarket
     - title: Discount Shop
@@ -28,4 +27,5 @@ nav_list:
     url: /space
     - title: About
     url: /about
+
 footer_content: "© 2026 Worbcoin. Trade P2P + Shop groceries with $WRB. Trade responsibly."
