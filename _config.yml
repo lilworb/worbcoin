@@ -1,13 +1,3 @@
-title: Worbcoin - P2P & Supermarket
-logo: "assets/logo.png"
-favicon: "assets/logo.png"
-description: Trade crypto on Worbcoin P2P + Shop groceries with $WRB at Worb Supermarket
-url: "https://worbcoin.org"
-baseurl: ""
-
-remote_theme: pmarsceill/just-the-docs
-search_enabled: true
-heading_anchors: true
 
 nav_list:
     - title: Home
@@ -30,5 +20,3 @@ nav_list:
     url: /space
     - title: About
     url: /about
-
-footer_content: "© 2026 Worbcoin. Trade P2P + Shop groceries with $WRB. Trade responsibly."
