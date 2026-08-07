@@ -4,7 +4,7 @@ title: Home
 nav_order: 1
 ---
 
-<img src="assets/logo.png" alt="Worbcoin" width="120" style="border-radius: 24px; margin-bottom: 20px;">
+<img src="assets/logo.png" alt="Worbcoin" width="120" style="border-radius: 24px; margin-bottom: 20px;" />
 
 # Worbcoin 
 Worbcoin is an innovative payment network and a new kind of money.
