@@ -1,7 +1,38 @@
+title: Worbcoin - P2P & Supermarket
+logo: "assets/logo.png"
+favicon: "assets/logo.png"
+description: Trade crypto on Worbcoin P2P + Shop groceries with $WRB at Worb Supermarket
+url: "https://worbcoin.org"
+baseurl: ""
+
+remote_theme: pmarsceill/just-the-docs
+
+# BLUE THEME COLORS
+color_scheme: light
+search_enabled: true
+heading_anchors: true
+
+# CUSTOM CSS FOR BLUE
+custom_head: |
+  <style>
+    :root {
+      --link-color: #2563eb;
+      --btn-primary-color: #2563eb;
+      --btn-primary-hover-color: #1d4ed8;
+      --nav-child-link-color: #1e40af;
+    }
+    .site-nav .nav-list .nav-list-item .nav-list-link:hover {
+      color: #2563eb;
+    }
+    .site-nav .nav-list .nav-list-item .nav-list-link.active {
+      background-image: linear-gradient(90deg, #2563eb 0%, #2563eb 4px, transparent 4px);
+    }
+  </style>
+
 nav_list:
     - title: Home
     url: /
-    - title: P2P
+    - title: Worbcoin P2P
     group: P2P
     - title: Trade
     url: /trade
@@ -9,13 +40,15 @@ nav_list:
     url: /markets
     - title: Wallet
     url: /wallet
-    - title: Supermarket
-    group: Supermarket
     - title: Worb Supermarket
+    group: Supermarket
+    - title: Shop
     url: /supermarket
-    - title: Discount Shop
+    - title: Discount
     url: /discount
     - title: WRB Chain
     url: /space
     - title: About
     url: /about
+
+footer_content: "© 2026 Worbcoin. Trade P2P + Shop groceries with $WRB. Trade responsibly."
