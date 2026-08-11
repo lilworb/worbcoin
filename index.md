@@ -13,7 +13,7 @@ nav_order: 1
 .btn-outline { background: white; color: #f7931a; border: 2px solid #f7931a; }
 .btn-outline:hover { background: #fff7ef; }
 .logo { width: 120px; margin-bottom: 20px; border-radius: 24px; }
-.network-bg { margin-top: 60px; }
+.section { padding: 60px 20px; text-align: center; max-width: 800px; margin: 0 auto; }
 </style>
 
 <div class="hero">
@@ -26,14 +26,12 @@ nav_order: 1
   <a href="/supermarket" class="btn btn-outline">Shop with $WRB</a>
 </div>
 
-<div class="network-bg">
-  <img src="https://i.imgur.com/8QZQZQZ.png" alt="network" style="width:100%; opacity:0.3;" />
+<div class="section">
+  <h2>Worbcoin P2P</h2>
+  <p>Trade crypto directly with other users. Zero middlemen.</p>
 </div>
 
----
-
-### Worbcoin P2P
-Trade crypto directly with other users. Zero middlemen.
-
-### Worb Supermarket  
-Use $WRB to buy groceries and essentials. Real world utility.
+<div class="section" style="background: #fafafa;">
+  <h2>Worb Supermarket</h2>
+  <p>Use $WRB to buy groceries and essentials. Real world utility.</p>
+</div>
