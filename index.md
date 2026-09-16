@@ -18,7 +18,8 @@ nav_order: 1
 
 <div class="hero">
   <img src="assets/logo.png" alt="Worbcoin" class="logo" />
-  <h1>Worbcoin is an innovative payment network and a new kind of money.</h1>
+  <h1>Revolutionize Your Finances!  Experience a fun and user-friendly crypto trading app that enables P2P 
+ </h1>
   <a href="/trade" class="btn btn-primary">Get started with Worbcoin</a>
   <a href="/wallet" class="btn btn-outline">Choose your wallet</a>
   <a href="/trade" class="btn btn-outline">Start Trading P2P</a>
