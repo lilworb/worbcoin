@@ -12,17 +12,16 @@ header{padding:15px 20px;display:flex;justify-content:space-between;align-items:
 nav a{color:white;text-decoration:none;margin-left:15px;font-size:14px}
 .section{padding:20px;max-width:900px;margin:auto}
 .balance-box{background:#11162a;padding:25px;border-radius:20px;border:1px solid #222;text-align:center;margin:20px 0}
-.big{font-size:36px;font-weight:bold;color:#4da3ff}
+.big{font-size:32px;font-weight:bold;color:#4da3ff;word-break:break-all}
 .small{color:#888;font-size:13px}
 .btn{padding:12px 20px;border-radius:20px;font-weight:bold;border:none;cursor:pointer;font-size:14px;width:48%}
 .btn-buy{background:#4da3ff;color:white}
 .btn-sell{background:transparent;color:#ff5a5a;border:1px solid #ff5a5a}
+.btn-full{width:100%;padding:14px;background:#4da3ff;color:white;border:none;border-radius:20px;font-weight:bold;font-size:16px;margin-top:15px;cursor:pointer}
 .card{background:#11162a;padding:16px;border-radius:15px;margin:10px 0;border:1px solid #222}
 .input{width:100%;padding:12px;background:#0a0e1a;border:1px solid #333;border-radius:10px;color:white;margin:10px 0}
 .flex{display:flex;justify-content:space-between;gap:10px}
-.history{margin-top:25px}
-.tag{font-size:11px;padding:3px 8px;border-radius:10px;background:#0a0e1a;border:1px solid #333}
-.green{color:#00ff88} .red{color:#ff5a5a}
+.addr{background:#0a0e1a;padding:10px;border-radius:10px;border:1px dashed #4da3ff;color:#4da3ff;font-size:12px;margin:10px 0;word-break:break-all}
 </style>
 </head>
 <body>
@@ -31,10 +30,21 @@ nav a{color:white;text-decoration:none;margin-left:15px;font-size:14px}
 <nav><a href="index.html">Home</a><a href="trade.html">P2P Trade</a></nav>
 </header>
 
-<div class="section">
-
+<div class="section" id="createScreen">
 <div class="balance-box">
-<p class="small">WORB Balance</p>
+<h2 style="color:#4da3ff">Create WORB Wallet</h2>
+<p class="small" style="margin-top:10px">1 WORB = $10 | Max Supply 10M</p>
+<p class="small" style="margin-top:15px">Create your secure WORB wallet to start trading P2P</p>
+<button class="btn-full" onclick="createWallet()">Create New Wallet</button>
+<p class="small" style="margin-top:15px">Your wallet will be created instantly - no email needed</p>
+</div>
+</div>
+
+<div class="section" id="walletScreen" style="display:none">
+<div class="balance-box">
+<p class="small">WORB Wallet Address</p>
+<div class="addr" id="walletAddr">worb1...</div>
+<p class="small" style="margin-top:15px">WORB Balance</p>
 <p class="big" id="balWorb">0 WORB</p>
 <p class="small" id="balUsd">$0.00 USD</p>
 <p class="small" style="margin-top:8px">Price: 1 WORB = $10 | Max Supply: 10M</p>
@@ -49,63 +59,96 @@ nav a{color:white;text-decoration:none;margin-left:15px;font-size:14px}
 <h4 id="boxTitle" style="color:#4da3ff;margin-bottom:10px">Buy WORB</h4>
 <input class="input" id="amount" type="number" placeholder="Enter amount of WORB">
 <p class="small">Total USD: <span id="totalUsd" style="color:#4da3ff">$0</span></p>
-<button class="btn btn-buy" style="width:100%;margin-top:10px" onclick="confirmTrade()">Confirm</button>
+<button class="btn-full" onclick="confirmTrade()">Confirm</button>
 <button class="btn btn-sell" style="width:100%;margin-top:10px" onclick="closeBox()">Cancel</button>
 </div>
 
-<div class="history">
+<div style="margin-top:25px">
 <h4 style="color:#4da3ff;margin-bottom:10px">Transaction History</h4>
-<div id="historyList">
-<p class="small">No transactions yet</p>
-</div>
+<div id="historyList"><p class="small">No transactions yet</p></div>
 </div>
 
+<button class="btn btn-sell" style="width:100%;margin-top:20px" onclick="resetWallet()">Logout / Delete Wallet</button>
 </div>
 
 <script>
-let balance = parseFloat(localStorage.getItem('worb_balance') || '100');
-let history = JSON.parse(localStorage.getItem('worb_history') || '[]');
-let type = 'buy';
 const PRICE = 10;
+let balance = parseFloat(localStorage.getItem('worb_balance') || '0');
+let history = JSON.parse(localStorage.getItem('worb_history') || '[]');
+let walletAddr = localStorage.getItem('worb_addr');
+let type = 'buy';
+
+function genAddr(){
+ let chars='abcdef0123456789';
+ let addr='worb1';
+ for(let i=0;i<32;i++){ addr+=chars[Math.floor(Math.random()*chars.length)]; }
+ return addr;
+}
+
+function checkWallet(){
+ if(walletAddr){
+  document.getElementById('createScreen').style.display='none';
+  document.getElementById('walletScreen').style.display='block';
+  document.getElementById('walletAddr').innerText=walletAddr;
+  render();
+ } else {
+  document.getElementById('createScreen').style.display='block';
+  document.getElementById('walletScreen').style.display='none';
+ }
+}
+
+function createWallet(){
+ walletAddr = genAddr();
+ localStorage.setItem('worb_addr', walletAddr);
+ localStorage.setItem('worb_balance', '0');
+ localStorage.setItem('worb_history', '[]');
+ balance=0; history=[];
+ checkWallet();
+ alert('Wallet Created!\n' + walletAddr);
+}
+
+function resetWallet(){
+ if(confirm('Delete wallet? You will lose access!')){
+  localStorage.removeItem('worb_addr');
+  localStorage.removeItem('worb_balance');
+  localStorage.removeItem('worb_history');
+  location.reload();
+ }
+}
 
 function render(){
  document.getElementById('balWorb').innerText = balance + ' WORB';
  document.getElementById('balUsd').innerText = '$' + (balance * PRICE).toFixed(2) + ' USD';
- let html = '';
+ let html='';
  if(history.length==0){ html='<p class="small">No transactions yet</p>'; }
  else{
   history.slice().reverse().forEach(h=>{
-   html+=`<div class="card"><p><strong>${h.type.toUpperCase()}</strong> <span class="tag">${h.amount} WORB @ $10</span> <span class="${h.type=='buy'?'green':'red'}">${h.type=='buy'?'+':'-'} $${h.usd}</span></p><p class="small">${h.date}</p></div>`;
+   html+=`<div class="card"><p><strong>${h.type.toUpperCase()}</strong> <span style="color:#4da3ff">${h.amount} WORB @ $10</span> <span style="color:${h.type=='buy'?'#00ff88':'#ff5a5a'}"> ${h.type=='buy'?'+':'-'} $${h.usd}</span></p><p class="small">${h.date}</p></div>`;
   });
  }
- document.getElementById('historyList').innerHTML = html;
+ document.getElementById('historyList').innerHTML=html;
  localStorage.setItem('worb_balance', balance);
  localStorage.setItem('worb_history', JSON.stringify(history));
 }
-function openBox(t){
- type=t;
- document.getElementById('tradeBox').style.display='block';
- document.getElementById('boxTitle').innerText = t=='buy'?'Buy WORB @ $10':'Sell WORB @ $10';
- document.getElementById('boxTitle').style.color = t=='buy'?'#4da3ff':'#ff5a5a';
-}
+
+function openBox(t){ type=t; document.getElementById('tradeBox').style.display='block'; document.getElementById('boxTitle').innerText=t=='buy'?'Buy WORB @ $10':'Sell WORB @ $10'; }
 function closeBox(){ document.getElementById('tradeBox').style.display='none'; }
 document.getElementById('amount').addEventListener('input', e=>{
- let v = parseFloat(e.target.value)||0;
- document.getElementById('totalUsd').innerText = '$' + (v*PRICE).toFixed(2);
+ let v=parseFloat(e.target.value)||0; document.getElementById('totalUsd').innerText='$'+(v*PRICE).toFixed(2);
 });
 function confirmTrade(){
- let amt = parseFloat(document.getElementById('amount').value);
- if(!amt || amt<=0){ alert('Enter amount'); return; }
+ let amt=parseFloat(document.getElementById('amount').value);
+ if(!amt||amt<=0){ alert('Enter amount'); return; }
  if(type=='sell' && amt>balance){ alert('Not enough WORB'); return; }
- let usd = amt*PRICE;
+ let usd=amt*PRICE;
  if(type=='buy'){ balance+=amt; } else { balance-=amt; }
  history.push({type, amount:amt, usd:usd, date:new Date().toLocaleString()});
  render(); closeBox();
  document.getElementById('amount').value='';
  document.getElementById('totalUsd').innerText='$0';
- alert(type.toUpperCase() + ' Success: ' + amt + ' WORB @ $10');
+ alert(type.toUpperCase()+' Success: '+amt+' WORB @ $10');
 }
-render();
+checkWallet();
 </script>
 </body>
 </html>
