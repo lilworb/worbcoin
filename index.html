@@ -1,35 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Worbcoin - P2P Trading</title>
-<link rel="icon" href="assets/logo.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Worbcoin - Future of P2P Money</title>
 <style>
-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;margin:0;color:#1a1a1a;text-align:center}
-.hero{padding:80px 20px}
-.hero h1{font-size:32px;font-weight:400;max-width:700px;margin:0 auto 40px;line-height:1.4}
-.btn{display:block;width:90%;max-width:400px;margin:12px auto;padding:16px;border-radius:8px;font-size:18px;font-weight:600;text-decoration:none}
-.primary{background:#2563eb;color:white;border:2px solid #2563eb}
-.outline{background:white;color:#2563eb;border:2px solid #2563eb}
-.logo{width:120px;border-radius:24px;margin-bottom:20px}
-.nav{padding:20px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center}
-.nav a{color:#2563eb;text-decoration:none;font-weight:600;margin-left:15px}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#0a0e1a;color:white}
+header{padding:15px 20px;display:flex;justify-content:space-between;align-items:center;background:#11162a}
+.logo{font-size:24px;font-weight:bold;color:#4da3ff}
+nav a{color:white;text-decoration:none;margin-left:15px;font-size:14px}
+.hero{text-align:center;padding:70px 20px;background:linear-gradient(135deg,#11162a,#1a2a5a)}
+.hero h1{font-size:42px;margin-bottom:10px}
+.hero p{color:#aaa;margin-bottom:25px;font-size:18px}
+.btn{display:inline-block;padding:14px 28px;border-radius:30px;text-decoration:none;font-weight:bold;margin:5px}
+.btn-blue{background:#4da3ff;color:white}
+.btn-outline{border:1px solid #4da3ff;color:#4da3ff}
+.section{padding:40px 20px;max-width:900px;margin:auto}
+.card{background:#11162a;padding:20px;border-radius:15px;margin:10px 0;border:1px solid #222}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+h2{margin-bottom:15px;color:#4da3ff}
+.price{font-size:28px;color:#4da3ff;font-weight:bold}
 </style>
 </head>
 <body>
-<div class="nav">
-<img src="assets/logo.png" width="40" style="border-radius:8px">
-<div><a href="/trade.html">Trade</a><a href="/wallet.html">Wallet</a></div>
-</div>
+<header>
+<div class="logo">WORBCOIN</div>
+<nav>
+<a href="trade.html">Trade P2P</a>
+<a href="wallet.html">Wallet</a>
+</nav>
+</header>
+
 <div class="hero">
-<img src="assets/logo.png" class="logo">
-<h1>Revolutionize Your Finances!  Experience a fun and user-friendly crypto trading app that enables P2P 
- </h1>
-<a href="/trade.html" class="btn primary">Get started with Worbcoin</a>
-<a href="/wallet.html" class="btn outline">Choose your wallet</a>
-<a href="/trade.html" class="btn outline">Start Trading P2P</a>
-<p style="margin-top:40px;color:#666">P2P Trading • No Middlemen • Secure Escrow</p>
+<h1>Worbcoin (WORB)</h1>
+<p>The Fast, Secure P2P Digital Currency for Everyone</p>
+<a href="trade.html" class="btn btn-blue">Buy WORB Now - $0.95</a>
+<a href="wallet.html" class="btn btn-outline">Create Wallet</a>
+<p style="margin-top:20px;font-size:13px;color:#666">Built on Decentralized Network</p>
 </div>
+
+<div class="section">
+<div class="grid">
+<div class="card">
+<h3>Total Supply</h3>
+<p class="price">100M WORB</p>
+<p>Fixed, no mint</p>
+</div>
+<div class="card">
+<h3>Current Price</h3>
+<p class="price">$0.95</p>
+<p>P2P Market Price</p>
+</div>
+</div>
+
+<div class="card" style="margin-top:20px">
+<h2>What is Worbcoin?</h2>
+<p style="line-height:1.6;color:#ccc">Worbcoin is a community-driven digital money built for fast, cheap peer-to-peer transactions. Send money anywhere in the world in seconds with almost zero fees. No banks, no borders, no delays.</p>
+</div>
+
+<div class="card">
+<h2>How to Buy</h2>
+<p>1. Create Wallet<br>2. Go to Trade P2P<br>3. Click Buy and complete trade with seller</p>
+</div>
+
+<div style="text-align:center;margin-top:30px">
+<h2>Join Community</h2>
+<a href="#" class="btn btn-blue">Join Telegram</a>
+<a href="#" class="btn btn-outline">Follow on X</a>
+</div>
+</div>
+
+<footer style="text-align:center;padding:30px;color:#555;font-size:12px">
+© 2026 Worbcoin.org - Decentralized P2P Currency
+</footer>
 </body>
 </html>
