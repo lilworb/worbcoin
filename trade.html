@@ -3,80 +3,121 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>P2P Trade - Worbcoin</title>
+<title>Getting started with WORB - Worbcoin</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#0a0e1a;color:white}
-header{padding:15px 20px;display:flex;justify-content:space-between;align-items:center;background:#11162a}
-.logo{font-size:24px;font-weight:bold;color:#4da3ff}
-nav a{color:white;text-decoration:none;margin-left:15px;font-size:14px}
-.section{padding:20px;max-width:900px;margin:auto}
-.box-title{color:#4da3ff;font-size:16px;margin:25px 0 10px 0;font-weight:bold;border-left:3px solid #4da3ff;padding-left:10px}
-.card{background:#11162a;padding:16px;border-radius:15px;margin:10px 0;border:1px solid #222;display:flex;justify-content:space-between;align-items:center}
-.price{color:#4da3ff;font-weight:bold}
-.btn{padding:8px 16px;border-radius:20px;font-weight:bold;border:none;cursor:pointer;margin-left:5px;font-size:13px}
-.btn-buy{background:#4da3ff;color:white}
-.btn-sell{background:transparent;color:#ff5a5a;border:1px solid #ff5a5a}
-.small{color:#888;font-size:12px}
-.badge{font-size:11px;padding:3px 8px;border-radius:10px;background:#0a0e1a;border:1px solid #333;color:#4da3ff}
-.actions{display:flex}
+*{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+body{background:white;color:#222}
+.top-bar{background:#13161f;color:white;padding:12px 20px;font-size:13px}
+.top-bar button{background:#ff9500;color:white;border:none;padding:8px 16px;border-radius:3px;font-weight:bold;margin-top:8px;cursor:pointer}
+.header{padding:18px 20px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee;max-width:1100px;margin:auto}
+.logo{font-size:28px;font-weight:bold;color:#4da3ff;display:flex;align-items:center;gap:8px}
+.logo span{color:#ff9500}
+nav a{color:#333;text-decoration:none;margin-left:20px;font-size:14px}
+.hero{background:#13161f;color:white;padding:60px 20px}
+.hero-inner{max-width:1100px;margin:auto}
+.hero h1{font-size:38px;line-height:1.2;max-width:400px;font-weight:800}
+.hero p{margin-top:15px;color:#aaa;font-size:18px;max-width:500px}
+.content{max-width:1100px;margin:auto;padding:50px 20px}
+.orange{color:#ff9500;text-align:center;font-size:22px;margin-bottom:40px}
+.step{display:flex;gap:20px;margin-bottom:45px}
+.num{width:48px;height:48px;border-radius:50%;border:2px solid #ddd;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:18px;flex-shrink:0}
+.step h3{font-size:20px;margin-bottom:10px}
+.step p{color:#666;line-height:1.6;font-size:15px}
+.p2p-box{background:#f9f9f9;border:1px solid #eee;padding:16px;border-radius:8px;display:flex;justify-content:space-between;align-items:center;margin:12px 0}
+.price{color:#ff9500;font-weight:bold}
+.btn{padding:8px 18px;border-radius:4px;font-weight:bold;border:none;cursor:pointer;font-size:13px}
+.btn-buy{background:#ff9500;color:white}
+.btn-sell{background:white;color:#ff9500;border:1px solid #ff9500}
+.small{color:#888;font-size:12px;margin-top:4px}
+.badge{background:#13161f;color:#ff9500;padding:2px 8px;border-radius:4px;font-size:11px}
 </style>
 </head>
 <body>
-<header>
-<div class="logo">WORBCOIN</div>
-<nav><a href="index.html">Home</a><a href="wallet.html">Wallet</a></nav>
-</header>
 
-<div class="section">
-<h2 style="color:#4da3ff">P2P Trade WORB</h2>
-<p class="small">1 WORB = $10 | Max Supply 10M</p>
+<div class="top-bar">
+<p>Keep Worbcoin.org independent and available worldwide.</p>
+<button onclick="window.location.href='wallet.html'">Support WORB - Create Wallet</button>
+</div>
 
-<div class="box-title">WORB P2P ONLY</div>
+<div class="header">
+<div class="logo"><span style="background:#ff9500;color:white;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px">W</span> WORBCOIN</div>
+<nav><a href="index.html">Home</a><a href="wallet.html">Wallet</a><a href="trade.html" style="color:#ff9500;font-weight:bold">P2P Trade</a></nav>
+</div>
 
-<div class="card">
+<div class="hero">
+<div class="hero-inner">
+<h1>Getting started with WORB P2P</h1>
+<p>Getting started with WORB does not require deep technical knowledge. Trade WORB P2P on BSC BEP20 at fixed $10.</p>
+</div>
+</div>
+
+<div class="content">
+<p class="orange">How to use WORB P2P</p>
+
+<div class="step">
+<div class="num">1</div>
 <div>
-<p><strong>@crypto_king</strong> <span class="badge">WORB</span> <span class="small">★ 98%</span></p>
-<p class="price">500 WORB @ $10</p>
-<p class="small">Limit: 10 - 5000 WORB</p>
-</div>
-<div class="actions">
-<button class="btn btn-buy" onclick="go()">Buy</button>
-<button class="btn btn-sell" onclick="go()">Sell</button>
+<h3>Inform yourself</h3>
+<p>WORB is different than what you know and use every day. Before you start using WORB, there are a few things you need to know in order to use it securely and avoid common pitfalls. WORB is BEP20 on BSC Chain, 1 WORB = $10 fixed, Max Supply 10 Million.</p>
 </div>
 </div>
 
-<div class="card">
+<div class="step">
+<div class="num">2</div>
 <div>
-<p><strong>@worb_pro</strong> <span class="badge">WORB</span> <span class="small">★ 99%</span></p>
-<p class="price">1200 WORB @ $10</p>
-<p class="small">Limit: 50 - 10000 WORB</p>
-</div>
-<div class="actions">
-<button class="btn btn-buy" onclick="go()">Buy</button>
-<button class="btn btn-sell" onclick="go()">Sell</button>
+<h3>Choose your wallet</h3>
+<p>You need a BSC BEP20 compatible wallet. You can create WORB BEP20 wallet on our site or connect MetaMask / Trust Wallet. Your wallet address will start with 0x... on BSC Mainnet Chain ID 56. <br><br><a href="wallet.html" style="color:#ff9500;font-weight:bold">→ Create BEP20 Wallet Now</a></p>
 </div>
 </div>
 
-<div class="card">
+<div class="step">
+<div class="num">3</div>
 <div>
-<p><strong>@worb_whale</strong> <span class="badge">WORB</span> <span class="small">★ 100%</span></p>
-<p class="price">2500 WORB @ $10</p>
-<p class="small">Limit: 100 - 2500 WORB</p>
+<h3>Get WORB</h3>
+<p>You can get WORB via P2P trading. Buy from sellers directly at $10. All trades are BEP20 on BSC. Start with small amount.<br><br></p>
+
+<div class="p2p-box">
+<div>
+<p><strong>@crypto_king</strong> <span class="badge">BEP20</span></p>
+<p class="price">500 WORB @ $10 <span style="color:#222;font-weight:normal">= $5000</span></p>
+<p class="small">Limit: 10-5000 WORB | Payment: Bank Transfer</p>
 </div>
-<div class="actions">
-<button class="btn btn-buy" onclick="go()">Buy</button>
-<button class="btn btn-sell" onclick="go()">Sell</button>
+<div><button class="btn btn-buy" onclick="go()">Buy</button></div>
+</div>
+
+<div class="p2p-box">
+<div>
+<p><strong>@worb_pro</strong> <span class="badge">BEP20</span></p>
+<p class="price">1200 WORB @ $10 <span style="color:#222;font-weight:normal">= $12000</span></p>
+<p class="small">Limit: 50-10000 WORB | Payment: USDT BEP20</p>
+</div>
+<div><button class="btn btn-buy" onclick="go()">Buy</button></div>
+</div>
+
+<div class="p2p-box">
+<div>
+<p><strong>@worb_whale</strong> <span class="badge">BEP20</span></p>
+<p class="price">2500 WORB @ $10 <span style="color:#222;font-weight:normal">= $25000</span></p>
+<p class="small">Limit: 100-2500 WORB | Payment: BNB</p>
+</div>
+<div><button class="btn btn-buy" onclick="go()">Buy</button></div>
+</div>
+
+</div>
+</div>
+
+<div class="step">
+<div class="num">4</div>
+<div>
+<h3>Secure your wallet</h3>
+<p>Like Bitcoin, WORB BEP20 requires you to secure your private key. Never share your seed phrase. Always trade P2P inside Worbcoin.org wallet to avoid scams. All WORB transactions are on BSC - verify on BscScan.</p>
 </div>
 </div>
 
 </div>
 
 <script>
-function go(){
- alert("WORB P2P $10 / WORB - Continue in your Account Wallet.");
- window.location.href = "wallet.html";
-}
+function go(){ window.location.href='wallet.html'; }
 </script>
 </body>
 </html>
