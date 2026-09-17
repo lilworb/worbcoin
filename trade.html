@@ -16,10 +16,12 @@ nav a{color:white;text-decoration:none;margin-left:15px;font-size:14px}
 .tab.active{background:#4da3ff;color:white;border-color:#4da3ff}
 .card{background:#11162a;padding:18px;border-radius:15px;margin:10px 0;border:1px solid #222;display:flex;justify-content:space-between;align-items:center}
 .price{color:#4da3ff;font-weight:bold}
-.btn{padding:8px 18px;border-radius:20px;font-weight:bold;border:none;cursor:pointer}
+.btn{padding:8px 16px;border-radius:20px;font-weight:bold;border:none;cursor:pointer;margin-left:5px;font-size:13px}
 .btn-buy{background:#4da3ff;color:white}
+.btn-sell{background:transparent;color:#ff5a5a;border:1px solid #ff5a5a}
 .small{color:#888;font-size:12px}
 .badge{font-size:11px;padding:3px 8px;border-radius:10px;background:#0a0e1a;border:1px solid #222;color:#4da3ff}
+.actions{display:flex}
 </style>
 </head>
 <body>
@@ -33,7 +35,7 @@ nav a{color:white;text-decoration:none;margin-left:15px;font-size:14px}
 
 <div class="section">
 <h2 style="color:#4da3ff;margin-bottom:5px">P2P Trade WORB</h2>
-<p class="small" style="margin-bottom:15px">1 WORB = $10 | Max Supply 10M | Buy/Sell with your Account</p>
+<p class="small" style="margin-bottom:15px">1 WORB = $10 | Max Supply 10M</p>
 
 <div class="tabs">
 <button class="tab active">All</button>
@@ -48,54 +50,32 @@ nav a{color:white;text-decoration:none;margin-left:15px;font-size:14px}
 <div>
 <p><strong>@crypto_king</strong> <span class="badge">USDT</span> <span class="small">★ 98%</span></p>
 <p class="price">500 WORB @ $10.00</p>
-<p class="small">Limit: 10 - 5000 USDT | Payment: USDT TRC20</p>
+<p class="small">USDT TRC20</p>
 </div>
-<button class="btn btn-buy" onclick="buy()">Buy</button>
+<div class="actions">
+<button class="btn btn-buy" onclick="go()">Buy</button>
+<button class="btn btn-sell" onclick="go()">Sell</button>
+</div>
 </div>
 
 <div class="card">
 <div>
 <p><strong>@btc_whale</strong> <span class="badge">BTC</span> <span class="small">★ 100%</span></p>
 <p class="price">100 WORB @ $10.00</p>
-<p class="small">Limit: 0.001 - 0.5 BTC | Payment: BTC</p>
+<p class="small">BTC Network</p>
 </div>
-<button class="btn btn-buy" onclick="buy()">Buy</button>
+<div class="actions">
+<button class="btn btn-buy" onclick="go()">Buy</button>
+<button class="btn btn-sell" onclick="go()">Sell</button>
+</div>
 </div>
 
 <div class="card">
 <div>
 <p><strong>@sol_trader</strong> <span class="badge">SOL</span> <span class="small">★ 97%</span></p>
 <p class="price">250 WORB @ $10.00</p>
-<p class="small">Limit: 1 - 100 SOL | Payment: SOL</p>
+<p class="small">SOL Network</p>
 </div>
-<button class="btn btn-buy" onclick="buy()">Buy</button>
-</div>
-
-<div class="card">
-<div>
-<p><strong>@bnb_master</strong> <span class="badge">BNB</span> <span class="small">★ 99%</span></p>
-<p class="price">300 WORB @ $10.00</p>
-<p class="small">Limit: 0.5 - 50 BNB | Payment: BNB BEP20</p>
-</div>
-<button class="btn btn-buy" onclick="buy()">Buy</button>
-</div>
-
-<div class="card">
-<div>
-<p><strong>@wrb_holder</strong> <span class="badge">WRB</span> <span class="small">★ 95%</span></p>
-<p class="price">1000 WORB @ $10.00</p>
-<p class="small">Limit: 10 - 10000 WRB | Payment: WRB</p>
-</div>
-<button class="btn btn-buy" onclick="buy()">Buy</button>
-</div>
-
-</div>
-
-<script>
-function buy(){
- alert("P2P Order at $10 / WORB. You will complete this trade inside your Account. WORB will be credited to your Wallet.");
- window.location.href = "wallet.html";
-}
-</script>
-</body>
-</html>
+<div class="actions">
+<button class="btn btn-buy" onclick="go()">Buy</button>
+<button class="btn btn-sell" onclick="go()">Sell</
