@@ -6,12 +6,31 @@
 <title>Worbcoin (WORB) - Fast P2P Digital Currency</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
-body{background:#0a0e1a;color:#fff;min-height:100vh}
+body{background:#0a0e1a;color:#fff;min-height:100vh;overflow-x:hidden}
 a{text-decoration:none}
-nav{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;background:#0a0e1a;border-bottom:1px solid rgba(77,163,255,0.1);position:sticky;top:0;z-index:10}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;background:#0a0e1a;border-bottom:1px solid rgba(77,163,255,0.1);position:sticky;top:0;z-index:100}
 .logo{color:#4da3ff;font-weight:800;font-size:20px;letter-spacing:0.5px}
+.nav-right{display:flex;align-items:center;gap:12px}
 .nav-links a{color:#8b9bb4;margin-left:18px;font-size:14px;font-weight:600}
 .nav-links a:hover{color:#4da3ff}
+.hamburger{width:38px;height:38px;border:1px solid rgba(77,163,255,0.25);border-radius:10px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;cursor:pointer;background:#141a2e}
+.hamburger span{width:16px;height:2px;background:#4da3ff;border-radius:2px;display:block}
+
+/* Drawer */
+#drawer{position:fixed;inset:0;background:#0a0e1a;z-index:200;transform:translateX(100%);transition:0.3s ease;padding:18px 20px;display:flex;flex-direction:column}
+#drawer.open{transform:translateX(0)}
+.drawer-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
+.close{font-size:22px;color:#8b9bb4;cursor:pointer;width:38px;height:38px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(77,163,255,0.2);border-radius:10px;background:#141a2e}
+.menu-item{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid rgba(77,163,255,0.08);color:#fff;font-size:16px;font-weight:600;cursor:pointer}
+.submenu{display:none;padding:8px 0 8px 12px}
+.submenu a{display:block;padding:10px 0;color:#8b9bb4;font-size:14px}
+.submenu a:hover{color:#4da3ff}
+.drawer-bottom{margin-top:auto;display:flex;flex-direction:column;gap:12px;padding-top:30px}
+.btn-login{border:1px solid rgba(77,163,255,0.3);color:#4da3ff;padding:14px;border-radius:30px;text-align:center;font-weight:700;background:#141a2e}
+.btn-join{background:#4da3ff;color:#fff;padding:14px;border-radius:30px;text-align:center;font-weight:700}
+.lang{text-align:center;color:#5a6a85;font-size:13px;margin:18px 0}
+
+/* Main content - same as your long version */
 .hero{background:linear-gradient(180deg,#101a33 0%,#0a0e1a 100%);text-align:center;padding:70px 20px 50px}
 .hero h1{font-size:42px;line-height:1.1;font-weight:800;margin-bottom:12px}
 .hero p{color:#8b9bb4;font-size:16px;margin-bottom:30px}
@@ -36,15 +55,52 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:18px 2
 .roadmap-item p{color:#8b9bb4;font-size:13px;margin-top:4px}
 .community{text-align:center;padding:10px 20px 40px}
 .footer{text-align:center;color:#3d4a60;font-size:12px;padding:30px 20px;border-top:1px solid rgba(77,163,255,0.08)}
-@media(min-width:700px){.hero h1{font-size:56px}.section{max-width:900px;margin:0 auto}}
+@media(min-width:800px){.hamburger{display:none}#drawer{display:none}.hero h1{font-size:56px}.section{max-width:900px;margin:0 auto}}
+@media(max-width:799px){.nav-links{display:none}}
 </style>
 </head>
 <body>
 
 <nav>
   <div class="logo">WORBCOIN</div>
-  <div class="nav-links"><a href="/trade.html">Trade P2P</a><a href="/wallet.html">Wallet</a></div>
+  <div class="nav-right">
+    <div class="nav-links"><a href="/trade.html">Trade P2P</a><a href="/wallet.html">Wallet</a></div>
+    <div class="hamburger" onclick="openDrawer()"><span></span><span></span><span></span></div>
+  </div>
 </nav>
+
+<div id="drawer">
+  <div class="drawer-top">
+    <div class="logo">WORBCOIN</div>
+    <div class="close" onclick="closeDrawer()">✕</div>
+  </div>
+
+  <div class="menu-item" onclick="toggleMenu('p1')">Products <span>∨</span></div>
+  <div id="p1" class="submenu">
+    <a href="/wallet.html">Web Wallet</a>
+    <a href="/trade.html">P2P Trading</a>
+    <a href="#">Mobile App (Soon)</a>
+    <a href="#">Desktop Wallet</a>
+  </div>
+
+  <div class="menu-item" onclick="toggleMenu('p2')">Earn <span>∨</span></div>
+  <div id="p2" class="submenu">
+    <a href="#">Become Seller</a>
+    <a href="#">Referral Program</a>
+    <a href="#">Staking (Soon)</a>
+  </div>
+
+  <a href="#" class="menu-item">News & Blog</a>
+  <a href="/trade.html" class="menu-item">Trade P2P</a>
+  <a href="/wallet.html" class="menu-item">Wallet</a>
+
+  <div class="lang">🇬🇧 English ∨</div>
+
+  <div class="drawer-bottom">
+    <a href="/wallet.html" class="btn-login">Login / Open Wallet</a>
+    <a href="/trade.html" class="btn-join">Create an account - Buy $10</a>
+  </div>
+</div>
 
 <div class="hero">
   <h1>Worbcoin (WORB)</h1>
@@ -92,7 +148,7 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:18px 2
 
   <div class="card">
     <h2>Tokenomics</h2>
-    <p><b style="color:#fff">Name:</b> Worbcoin<br><b style="color:#fff">Symbol:</b> WORB<br><b style="color:#fff">Standard:</b> BEP20 (BSC)<br><b style="color:#fff">Total Supply:</b> 10,000,000 WORB<br><b style="color:#fff">Decimals:</b> 9<br><b style="color:#fff">Contract:</b> Deployed on BSC Mainnet (Verifiable on BscScan)<br><br>100% for community. No team allocation. No mint function. Liquidity locked.</p>
+    <p><b style="color:#fff">Name:</b> Worbcoin<br><b style="color:#fff">Symbol:</b> WRB<br><b style="color:#fff">Standard:</b> BEP20 (BSC)<br><b style="color:#fff">Total Supply:</b> 10,000,000 WRB<br><b style="color:#fff">Decimals:</b> 18<br><b style="color:#fff">Contract:</b> Deployed on BSC Mainnet (Verifiable on BscScan)<br><br>100% for community. No team allocation. No mint function. Liquidity locked.</p>
   </div>
 
   <div class="card">
@@ -108,7 +164,6 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:18px 2
     <p>We never hold your funds. Your wallet is created in your browser. Your 12-word phrase is your bank. Save it offline. If you lose it, no one can recover it - including us. This is true decentralization.</p><br>
     <p style="color:#4da3ff;font-weight:700">Not your keys, not your coins. We recommend self-custody.</p>
   </div>
-
 </div>
 
 <div class="community">
@@ -119,5 +174,10 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:18px 2
 
 <div class="footer">© 2026 Worbcoin.org - Decentralized P2P Currency<br>BEP20 on BNB Smart Chain</div>
 
+<script>
+function openDrawer(){document.getElementById('drawer').classList.add('open')}
+function closeDrawer(){document.getElementById('drawer').classList.remove('open')}
+function toggleMenu(id){var el=document.getElementById(id);el.style.display=el.style.display==='block'?'none':'block'}
+</script>
 </body>
 </html>
