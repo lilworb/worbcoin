@@ -3,76 +3,121 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Worbcoin - Future of P2P Money</title>
+<title>Worbcoin (WORB) - Fast P2P Digital Currency</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#0a0e1a;color:white}
-header{padding:15px 20px;display:flex;justify-content:space-between;align-items:center;background:#11162a}
-.logo{font-size:24px;font-weight:bold;color:#4da3ff}
-nav a{color:white;text-decoration:none;margin-left:15px;font-size:14px}
-.hero{text-align:center;padding:70px 20px;background:linear-gradient(135deg,#11162a,#1a2a5a)}
-.hero h1{font-size:42px;margin-bottom:10px}
-.hero p{color:#aaa;margin-bottom:25px;font-size:18px}
-.btn{display:inline-block;padding:14px 28px;border-radius:30px;text-decoration:none;font-weight:bold;margin:5px}
-.btn-blue{background:#4da3ff;color:white}
-.btn-outline{border:1px solid #4da3ff;color:#4da3ff}
-.section{padding:40px 20px;max-width:900px;margin:auto}
-.card{background:#11162a;padding:20px;border-radius:15px;margin:10px 0;border:1px solid #222}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
-h2{margin-bottom:15px;color:#4da3ff}
-.price{font-size:28px;color:#4da3ff;font-weight:bold}
+*{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+body{background:#0a0e1a;color:#fff;min-height:100vh}
+a{text-decoration:none}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;background:#0a0e1a;border-bottom:1px solid rgba(77,163,255,0.1);position:sticky;top:0;z-index:10}
+.logo{color:#4da3ff;font-weight:800;font-size:20px;letter-spacing:0.5px}
+.nav-links a{color:#8b9bb4;margin-left:18px;font-size:14px;font-weight:600}
+.nav-links a:hover{color:#4da3ff}
+.hero{background:linear-gradient(180deg,#101a33 0%,#0a0e1a 100%);text-align:center;padding:70px 20px 50px}
+.hero h1{font-size:42px;line-height:1.1;font-weight:800;margin-bottom:12px}
+.hero p{color:#8b9bb4;font-size:16px;margin-bottom:30px}
+.btn-primary{display:inline-block;background:#4da3ff;color:#fff;padding:16px 32px;border-radius:30px;font-weight:700;font-size:16px;margin:8px;width:260px;max-width:90%}
+.btn-outline{display:inline-block;border:1px solid rgba(77,163,255,0.4);color:#4da3ff;padding:14px 32px;border-radius:30px;font-weight:700;font-size:16px;margin:8px;width:260px;max-width:90%;background:rgba(77,163,255,0.08)}
+.small{color:#5a6a85;font-size:13px;margin-top:20px}
+.section{padding:20px}
+.card{background:#141a2e;border:1px solid rgba(77,163,255,0.12);border-radius:18px;padding:22px;margin-bottom:16px}
+.card h2{color:#4da3ff;font-size:20px;margin-bottom:10px}
+.card p, .card li{color:#c2cfe2;font-size:14.5px;line-height:1.6}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px}
+.stat{background:#141a2e;border:1px solid rgba(77,163,255,0.12);border-radius:18px;padding:18px}
+.stat b{color:#fff;display:block;font-size:15px}
+.stat span{color:#4da3ff;font-size:24px;font-weight:800;display:block;line-height:1.2;margin:4px 0}
+.stat small{color:#8b9bb4;font-size:12px}
+.list{list-style:none}
+.list li{margin:8px 0;padding-left:20px;position:relative}
+.list li:before{content:"•";color:#4da3ff;position:absolute;left:0;font-weight:800}
+.roadmap-item{border-left:2px solid rgba(77,163,255,0.2);padding:0 0 20px 18px;margin-left:8px;position:relative}
+.roadmap-item:before{content:"";width:10px;height:10px;background:#4da3ff;border-radius:50%;position:absolute;left:-6px;top:2px}
+.roadmap-item h4{color:#fff;font-size:15px}
+.roadmap-item p{color:#8b9bb4;font-size:13px;margin-top:4px}
+.community{text-align:center;padding:10px 20px 40px}
+.footer{text-align:center;color:#3d4a60;font-size:12px;padding:30px 20px;border-top:1px solid rgba(77,163,255,0.08)}
+@media(min-width:700px){.hero h1{font-size:56px}.section{max-width:900px;margin:0 auto}}
 </style>
 </head>
 <body>
-<header>
-<div class="logo">WORBCOIN</div>
+
 <nav>
-<a href="trade.html">Trade P2P</a>
-<a href="wallet.html">Wallet</a>
+  <div class="logo">WORBCOIN</div>
+  <div class="nav-links"><a href="/trade.html">Trade P2P</a><a href="/wallet.html">Wallet</a></div>
 </nav>
-</header>
 
 <div class="hero">
-<h1>Worbcoin (WORB)</h1>
-<p>The Fast, Secure P2P Digital Currency for Everyone</p>
-<a href="trade.html" class="btn btn-blue">Buy WORB Now - $10</a>
-<a href="wallet.html" class="btn btn-outline">Create Wallet</a>
-<p style="margin-top:20px;font-size:13px;color:#666">Built on Decentralized Network</p>
+  <h1>Worbcoin (WORB)</h1>
+  <p>The Fast, Secure P2P Digital Currency for Everyone</p>
+  <a href="/trade.html" class="btn-primary">Buy WORB Now - $10</a><br>
+  <a href="/wallet.html" class="btn-outline">Create Wallet</a>
+  <div class="small">Built on Decentralized Network</div>
 </div>
 
 <div class="section">
-<div class="grid">
-<div class="card">
-<h3>MAX Supply</h3>
-<p class="price">10M WORB</p>
-<p>Fixed, no mint</p>
-</div>
-<div class="card">
-<h3>Current Price</h3>
-<p class="price">$10</p>
-<p>P2P Market Price</p>
-</div>
+  <div class="grid2">
+    <div class="stat"><b>MAX Supply</b><span>10M WORB</span><small>Fixed, no mint</small></div>
+    <div class="stat"><b>Current Price</b><span>$10</span><small>P2P Market Price</small></div>
+    <div class="stat"><b>Network</b><span>BEP20 BSC</span><small>BNB Smart Chain</small></div>
+    <div class="stat"><b>Fees</b><span>~$0.01</span><small>Almost zero</small></div>
+  </div>
+
+  <div class="card">
+    <h2>What is Worbcoin?</h2>
+    <p>Worbcoin is a community-driven digital money built for fast, cheap peer-to-peer transactions. Send money anywhere in the world in seconds with almost zero fees. No banks, no borders, no delays.</p><br>
+    <p>Built on BNB Smart Chain (BEP20), WORB combines the security of blockchain with the speed needed for everyday payments in Africa and worldwide.</p>
+  </div>
+
+  <div class="card">
+    <h2>Why Worbcoin?</h2>
+    <ul class="list">
+      <li><b style="color:#fff">Lightning Fast:</b> Transactions confirm in 3 seconds</li>
+      <li><b style="color:#fff">Ultra Low Fees:</b> Less than $0.01 per transaction</li>
+      <li><b style="color:#fff">Self-Custody:</b> Not your keys, not your coins. You control your wallet</li>
+      <li><b style="color:#fff">P2P Trading:</b> Buy and sell directly with people, no central exchange needed</li>
+      <li><b style="color:#fff">Fixed Supply:</b> Only 10 million WORB will ever exist</li>
+      <li><b style="color:#fff">Community First:</b> No VC, no presale, fair launch</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>How to Buy</h2>
+    <ul class="list">
+      <li>1. Create Wallet - Go to Wallet page and create your BEP20 wallet</li>
+      <li>2. Go to Trade P2P - Choose a trusted seller</li>
+      <li>3. Click Buy and complete trade with seller via bank transfer / USDT</li>
+      <li>4. WORB appears in your wallet instantly after seller releases</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Tokenomics</h2>
+    <p><b style="color:#fff">Name:</b> Worbcoin<br><b style="color:#fff">Symbol:</b> WORB<br><b style="color:#fff">Standard:</b> BEP20 (BSC)<br><b style="color:#fff">Total Supply:</b> 10,000,000 WORB<br><b style="color:#fff">Decimals:</b> 18<br><b style="color:#fff">Contract:</b> Deployed on BSC Mainnet (Verifiable on BscScan)<br><br>100% for community. No team allocation. No mint function. Liquidity locked.</p>
+  </div>
+
+  <div class="card">
+    <h2>Roadmap</h2>
+    <div class="roadmap-item"><h4>Q1 2026 - Launch ✅</h4><p>Website, Web Wallet, P2P Market launched</p></div>
+    <div class="roadmap-item"><h4>Q2 2026 - Growth</h4><p>BEP20 Contract deployment, 1000+ holders, Community building</p></div>
+    <div class="roadmap-item"><h4>Q3 2026 - Mobile App</h4><p>Worbcoin iOS & Android app for trading on the go</p></div>
+    <div class="roadmap-item"><h4>Q4 2026 - Desktop & DeFi</h4><p>Desktop wallet, Staking, Merchant tools</p></div>
+  </div>
+
+  <div class="card">
+    <h2>Security - Self Custody</h2>
+    <p>We never hold your funds. Your wallet is created in your browser. Your 12-word phrase is your bank. Save it offline. If you lose it, no one can recover it - including us. This is true decentralization.</p><br>
+    <p style="color:#4da3ff;font-weight:700">Not your keys, not your coins. We recommend self-custody.</p>
+  </div>
+
 </div>
 
-<div class="card" style="margin-top:20px">
-<h2>What is Worbcoin?</h2>
-<p style="line-height:1.6;color:#ccc">Worbcoin is a community-driven digital money built for fast, cheap peer-to-peer transactions. Send money anywhere in the world in seconds with almost zero fees. No banks, no borders, no delays.</p>
+<div class="community">
+  <h2 style="color:#4da3ff;margin-bottom:20px">Join Community</h2>
+  <a href="https://t.me/worbcoin" class="btn-primary" style="width:180px;padding:14px 20px;font-size:14px">Join Telegram</a>
+  <a href="https://x.com/worbcoin" class="btn-outline" style="width:180px;padding:12px 20px;font-size:14px">Follow on X</a>
 </div>
 
-<div class="card">
-<h2>How to Buy</h2>
-<p>1. Create Wallet<br>2. Go to Trade P2P<br>3. Click Buy and complete trade with seller</p>
-</div>
+<div class="footer">© 2026 Worbcoin.org - Decentralized P2P Currency<br>BEP20 on BNB Smart Chain</div>
 
-<div style="text-align:center;margin-top:30px">
-<h2>Join Community</h2>
-<a href="#" class="btn btn-blue">Join Telegram</a>
-<a href="#" class="btn btn-outline">Follow on X</a>
-</div>
-</div>
-
-<footer style="text-align:center;padding:30px;color:#555;font-size:12px">
-© 2026 Worbcoin.org - Decentralized P2P Currency
-</footer>
 </body>
 </html>
