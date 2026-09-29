@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Worbcoin Whitepaper v1.1 | WRB</title>
+<style>
+:root{--bg:#080c19;--card:#11172b;--blue:#4da3ff;--text:#e6e8ef;--muted:#8a91a8}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,Arial,sans-serif}
+body{background:var(--bg);color:var(--text);line-height:1.7}
+header{padding:20px;max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+header a{color:var(--blue);text-decoration:none;font-weight:bold}
+.hero{max-width:1100px;margin:30px auto;padding:0 20px;text-align:center}
+.hero h1{font-size:42px;color:var(--blue);margin-bottom:10px}
+.hero p{color:var(--muted)}
+.toc{max-width:800px;margin:30px auto;background:var(--card);border:1px solid #1e2742;border-radius:16px;padding:24px}
+.toc h3{color:var(--blue);margin-bottom:12px}
+.toc a{display:block;color:var(--text);text-decoration:none;padding:8px 0;border-bottom:1px solid #1e2742}
+.toc a:hover{color:var(--blue)}
+.content{max-width:800px;margin:0 auto;padding:20px}
+.content h2{color:var(--blue);margin:40px 0 15px;font-size:26px;border-left:4px solid var(--blue);padding-left:12px}
+.content h3{margin:20px 0 10px;color:#fff}
+.content p{margin-bottom:16px;color:#c2c8db}
+.card{background:var(--card);border:1px solid #1e2742;border-radius:12px;padding:18px;margin:20px 0}
+.tag{display:inline-block;background:rgba(77,163,255,0.15);color:var(--blue);padding:4px 10px;border-radius:20px;font-size:12px;margin:4px}
+table{width:100%;border-collapse:collapse;margin:15px 0}
+td{padding:12px;border-bottom:1px solid #1e2742}
+td:first-child{color:var(--muted)}
+.btn{display:inline-block;background:var(--blue);color:#fff;padding:14px 28px;border-radius:30px;text-decoration:none;font-weight:bold;margin:10px 5px}
+.btn-outline{background:transparent;border:1.5px solid var(--blue);color:var(--blue)}
+footer{text-align:center;padding:40px;color:var(--muted);font-size:13px}
+@media(max-width:600px){.hero h1{font-size:28px}}
+</style>
+</head>
+<body>
+<header>
+<a href="/">← Back to Worbcoin</a>
+<a href="https://t.me/emma145012" target="_blank">Telegram</a>
+</header>
+
+<div class="hero">
+<h1>WORBCOIN WHITEPAPER</h1>
+<p>v1.1 Extended • The People's P2P Money • Fast, Cheap, Borderless • worbcoin.org</p>
+<br>
+<a class="btn" href="#" onclick="window.print()">Download PDF</a>
+<a class="btn btn-outline" href="/remote-jobs.html">We're Hiring - Remote Jobs</a>
+</div>
+
+<div class="toc">
+<h3>Table of Contents</h3>
+<a href="#abstract">Abstract</a>
+<a href="#intro">1. Introduction</a>
+<a href="#problem">2. The Problem</a>
+<a href="#solution">3. Our Solution</a>
+<a href="#tech">4. Technology</a>
+<a href="#tokenomics">5. Tokenomics</a>
+<a href="#usecases">6. Use Cases</a>
+<a href="#p2p">7. P2P Marketplace</a>
+<a href="#roadmap">8. Roadmap</a>
+<a href="#security">9. Security & Self-Custody</a>
+<a href="#gov">10. Community Governance</a>
+<a href="#risk">11. Risk Disclaimer</a>
+<a href="#conclusion">12. Conclusion</a>
+</div>
+
+<div class="content">
+
+<h2 id="abstract">Abstract</h2>
+<p>The global financial system is broken for everyday people. Sending money is slow, expensive, and controlled by intermediaries. In Africa alone, over 400 million adults are unbanked and remittance fees average 8-12%.</p>
+<p>Worbcoin (WRB) fixes this. A community-driven, fixed-supply digital money built on BNB Smart Chain (BEP20) for lightning-fast, near-zero-fee peer-to-peer transactions. Only 10M supply, 100% community owned, true self-custody.</p>
+
+<h2 id="intro">1. Introduction: What is Worbcoin?</h2>
+<p><b>Worbcoin is usable money.</b> Not just another token. Built for a trader in Lagos, a student in Nairobi, and a freelancer in Ghana to use daily without $5 gas fees or bank delays.</p>
+<p>Built on BNB Smart Chain, WRB combines blockchain security with real-world usability. No VC. No presale. Fair launch.</p>
+
+<h2 id="problem">2. The Problem We Solve</h2>
+<div class="card">
+<p><b>• High Costs:</b> Ethereum costs $2-$50 per transaction<br>
+<b>• Slow:</b> Banks take hours to 3 days, remittance 2-5 days<br>
+<b>• Centralization:</b> Exchanges hold your money - FTX proved the risk<br>
+<b>• Inflation:</b> Fiat loses 10-25% yearly in emerging markets<br>
+<b>• No Local On-ramp:</b> People need bank transfer P2P, not just USDT</p>
+</div>
+
+<h2 id="solution">3. Our Solution</h2>
+<h3>Lightning Fast</h3><p>3-second confirmation on BSC. Not 10 minutes like Bitcoin.</p>
+<h3>Ultra Low Fees</h3><p>$0.005 - $0.01 per transaction. Send $1 or $100k for same 1 cent fee.</p>
+<h3>True Self-Custody</h3><p>Wallet created client-side. 12-word phrase generated locally. We never see it.</p>
+<h3>Native P2P Marketplace</h3><p>Buy WRB directly from sellers using bank transfer, Opay, PalmPay, USDT.</p>
+<h3>Fixed & Scarce</h3><p>Only 10,000,000 WRB. No mint function. Bitcoin is 21M, Worbcoin is 10M - 52% rarer.</p>
+
+<h2 id="tech">4. Technology Architecture</h2>
+<p><b>Why BNB Smart Chain (BEP20)?</b> Speed (3 sec), Cost ($0.01 vs $5), Adoption (most used chain in Africa). Fully compatible with MetaMask, Trust Wallet.</p>
+<div class="card">
+<span class="tag">Non-Custodial</span>
+<span class="tag">Client-Side Encryption</span>
+<span class="tag">No Admin Keys</span>
+<span class="tag">No Mint</span>
+<span class="tag">BscScan Verified</span>
+<span class="tag">Liquidity Locked</span>
+</div>
+
+<h2 id="tokenomics">5. Tokenomics</h2>
+<table>
+<tr><td>Name</td><td>Worbcoin</td></tr>
+<tr><td>Symbol</td><td>WRB</td></tr>
+<tr><td>Network</td><td>BNB Smart Chain (BEP20)</td></tr>
+<tr><td>Total Supply</td><td>10,000,000 WRB</td></tr>
+<tr><td>Decimals</td><td>9</td></tr>
+<tr><td>Contract</td><td>Deployed on BSC Mainnet - Verify on BscScan</td></tr>
+<tr><td>Team Allocation</td><td>0% - 0 WRB</td></tr>
+<tr><td>Community</td><td>100% - 10,000,000 WRB</td></tr>
+<tr><td>Mint Function</td><td>Disabled Permanently</td></tr>
+</table>
+<p>This is a fair launch. No one got cheap tokens before you.</p>
+
+<h2 id="usecases">6. Use Cases</h2>
+<p>• Daily Payments • Remittance • Savings vs Inflation • P2P Trading for Profit • Merchant Payments (Q4 2026) • Future Staking</p>
+
+<h2 id="p2p">7. P2P Marketplace - How to Buy</h2>
+<div class="card">
+<p>1. <b>Create Wallet:</b> worbcoin.org/wallet - Save 12-word phrase on paper<br>
+2. <b>Go to Trade P2P:</b> Browse verified sellers<br>
+3. <b>Place Order:</b> Click Buy, enter amount<br>
+4. <b>Pay Seller:</b> Transfer Naira via bank / OPay / USDT<br>
+5. <b>Receive WRB:</b> Instantly after seller releases</p>
+<p style="color:var(--blue)">Safety: Never release before confirming bank alert. Name must match.</p>
+</div>
+
+<h2 id="roadmap">8. Roadmap</h2>
+<h3>Q1 2026 - Foundation [DONE]</h3><p>Website, Web Wallet, P2P Market, Community building</p>
+<h3>Q2 2026 - Growth [CURRENT]</h3><p>BEP20 Deployment, BscScan Verification, 1000+ Holders, Ambassador Program</p>
+<h3>Q3 2026 - Mobile Era</h3><p>iOS & Android App, Push notifications, QR payments, Encrypted chat</p>
+<h3>Q4 2026 - Expansion</h3><p>Desktop Wallet, Staking, Merchant API & Payment Links</p>
+<p><b>2027 Vision:</b> 100,000 holders, merchant adoption in 5 countries.</p>
+
+<h2 id="security">9. Security & Self-Custody</h2>
+<p>We never hold your funds. Your 12-word phrase IS your bank.</p>
+<div class="card" style="border-color:var(--blue)">
+<p>⚠️ Worbcoin team will NEVER ask for your phrase. Support will NEVER DM you first.<br><br>
+Best Practices:<br>
+1. Write phrase on paper, keep offline<br>
+2. Never screenshot or save in notes<br>
+3. Never share with anyone claiming to be support<br>
+4. Verify Telegram is t.me/emma145012 only</p>
+</div>
+
+<h2 id="gov">10. Community Governance</h2>
+<p>Worbcoin is community-driven. No CEO controls supply. Future decisions on staking, fees, listings will be voted by holders in Telegram. Community = Price.</p>
+
+<h2 id="risk">11. Risk & Disclaimer</h2>
+<p style="color:var(--muted);font-size:14px">Crypto is volatile. Price determined by P2P market demand. This whitepaper is not financial advice. Do your own research. Only invest what you can afford to lose. Smart contract risk exists - always verify contract on BscScan.</p>
+
+<h2 id="conclusion">12. Conclusion</h2>
+<p>Worbcoin is more than a coin. It is a movement to give Africa fast, cheap, borderless money owned by the people.</p>
+<p><b>10 Million supply. $0.01 fees. 3-second speed. 100% community.</b><br><br>The future of money is peer-to-peer. The future is Worbcoin.</p>
+
+<br><br>
+<div style="text-align:center">
+<a class="btn" href="https://worbcoin.org/wallet">Create Wallet</a>
+<a class="btn btn-outline" href="https://t.me/emma145012">Join Telegram</a>
+</div>
+
+</div>
+
+<footer>
+<p>© 2026 Worbcoin.org - Decentralized P2P Currency<br>BEP20 on BNB Smart Chain<br>worbcoin.org | t.me/emma145012</p>
+</footer>
+</body>
+</html>
